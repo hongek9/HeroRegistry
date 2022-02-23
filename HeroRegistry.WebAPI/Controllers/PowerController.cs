@@ -12,6 +12,7 @@ namespace HeroRegistry.WebAPI.Controllers
 {
     public class PowerController : ApiController
     {
+        [Authorize]
         private PowerService CreatePowerService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

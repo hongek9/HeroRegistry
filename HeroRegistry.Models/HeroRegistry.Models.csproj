@@ -54,12 +54,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="HeroJobModels\HeroJobCreate.cs" />
+    <Compile Include="HeroJobModels\HeroJobDetails.cs" />
+    <Compile Include="HeroJobModels\HeroJobEdit.cs" />
+    <Compile Include="HeroModels\HeroCreate.cs" />
+    <Compile Include="HeroModels\HeroDetails.cs" />
+    <Compile Include="HeroModels\HeroEdit.cs" />
+    <Compile Include="HeroModels\HeroInHeroJob.cs" />
+    <Compile Include="JobModels\JobCreate.cs" />
+    <Compile Include="JobModels\JobDetails.cs" />
+    <Compile Include="JobModels\JobEdit.cs" />
+    <Compile Include="JobModels\JobInLocation.cs" />
+    <Compile Include="LocationModels\LocationCreate.cs" />
+    <Compile Include="LocationModels\LocationDetails.cs" />
+    <Compile Include="LocationModels\LocationEdit.cs" />
+    <Compile Include="PowerModels\PowerCreate.cs" />
+    <Compile Include="PowerModels\PowerDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeroRegistry.Data\HeroRegistry.Data.csproj">
+      <Project>{48E9BA45-B8E9-4CBE-A619-851750013893}</Project>
+      <Name>HeroRegistry.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

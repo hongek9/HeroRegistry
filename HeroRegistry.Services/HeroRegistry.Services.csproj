@@ -54,12 +54,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="HeroJobService.cs" />
+    <Compile Include="HeroService.cs" />
+    <Compile Include="JobService.cs" />
+    <Compile Include="LocationService.cs" />
+    <Compile Include="PowerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeroRegistry.Data\HeroRegistry.Data.csproj">
+      <Project>{48E9BA45-B8E9-4CBE-A619-851750013893}</Project>
+      <Name>HeroRegistry.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeroRegistry.Models\HeroRegistry.Models.csproj">
+      <Project>{5F10A047-C9BF-4A44-8A23-41AA4D57F749}</Project>
+      <Name>HeroRegistry.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

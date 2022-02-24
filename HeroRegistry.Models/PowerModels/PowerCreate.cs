@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroRegistry.Data
+namespace HeroRegistry.Models.PowerModels
 {
-    public class Power
-    {   
-        [Key]
-        public int PowerId { get; set; }
-
+    public class PowerCreate
+    {
         [Required]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string PowerDescription { get; set; }
 
         [Required]

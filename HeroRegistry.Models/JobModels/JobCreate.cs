@@ -1,32 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroRegistry.Data
+namespace HeroRegistry.Models.JobModels
 {
-    public class Job
+    public class JobCreate
     {
-        [Key]
-        public int JobId { get; set; }
 
         [Required]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string JobDescription { get; set; }
 
         [Required]
         public int TotalPowerRatingRequired { get; set; }
 
-        [ForeignKey(nameof(Location))]
+        [Required]
         public int LocationId { get; set; }
-        public virtual Location Location { get; set; }
 
-        [ForeignKey(nameof(HeroJob))]
         public int HeroJobId { get; set; }
 
-        public virtual HeroJob HeroJob { get; set; }
 
     }
 }

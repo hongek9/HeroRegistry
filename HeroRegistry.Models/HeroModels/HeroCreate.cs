@@ -1,33 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroRegistry.Data
+namespace HeroRegistry.Models.HeroModels
 {
-    public class Hero
+    public class HeroCreate
     {
-        [Key]
-        public int HeroId { get; set; }
-
         [Required]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string RealFullName { get; set; }
 
         [Required]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string HeroName { get; set; }
 
         [Required]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string HomeBase { get; set; }
 
-        [ForeignKey(nameof(Power))]
+        [Required]
         public int PowerId { get; set; }
-        public virtual Power Power { get; set; }
-
-        [ForeignKey(nameof(HeroJob))]
         public int HeroJobId { get; set; }
-        public virtual HeroJob HeroJob { get; set; }
     }
 }

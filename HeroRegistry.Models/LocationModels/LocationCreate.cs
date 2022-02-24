@@ -1,20 +1,16 @@
-﻿using System;
+﻿using HeroRegistry.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroRegistry.Data
+namespace HeroRegistry.Models.LocationModels
 {
-    public class Location
+    public class LocationCreate
     {
-        [Key]
-        public int LocationId { get; set; }
-
         [Required]
         public string LocationName { get; set; }
-
-        public virtual List<Job> Jobs { get; set; } = new List<Job>();
     }
 }

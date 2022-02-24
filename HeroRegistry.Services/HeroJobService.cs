@@ -43,6 +43,7 @@ namespace HeroRegistry.Services
                     Heroes = e.Heroes.Select(hero => new HeroInHeroJob() { 
                         HeroId = hero.HeroId,
                         RealFullName = hero.RealFullName,
+                        HeroName = hero.HeroName,
                         HomeBase = hero.HomeBase,
                         Power = new PowerDetails()
                         {
